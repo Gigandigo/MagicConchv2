@@ -7,4 +7,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'MagicConch';
+  
+  conchalert(){
+    alert("Maybe some day");
+  }
 }
