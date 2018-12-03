@@ -6,18 +6,30 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./qaconch.component.css']
 })
 export class QAconchComponent implements OnInit {
-  answer = ["Maybe some day",
+  textinput = "";
+  answers = ["Maybe some day",
   "Nothing.",
   "Neither.",
   "I don't think so.",
   "Yes.",
   "Try asking again.",
   "No."];
-  rand = this.answer[Math.floor(Math.random() * this.answer.length)];
+answer = "";
   constructor() { }
-
+  
   ngOnInit() {
-console.log(this.answer);
+    console.log(!(this.answer.length > 0))
   }
-
+  conchalert(){
+    if(this.textinput.length > 0){
+      this.answer = this.answers[Math.floor(Math.random() * this.answers.length)]
+    }
+    // this.answer = this.answers[Math.floor(Math.random() * this.answers.length)];
+    console.log(this.textinput)
+  }
+  conchreset(){
+   this.answer = "";
+   this.textinput = ""; 
+  
+  }
 }

@@ -1,5 +1,7 @@
-<p>
-  {{ rand }}
+<p *ngIf="answer.length > 0" id="farts">
+  {{ answer }}
 </p>
-<input type="text" name="firstname" class="center" id="textbutt" placeholder="Ask it Something...">
-<button class="center" id="submitbutt" (click)="this.conchalert()">Pull String</button>
+<button *ngIf="answer.length > 0" class="center" id="answerbutt"(click)="this.conchreset()">Try Again</button> 
+<input [(ngModel)]="textinput" *ngIf="!answer.length > 0" type="text" name="question" class="center" id="textbutt" placeholder="Ask it Something...">
+<button *ngIf="!answer.length > 0" class="center" id="submitbutt" (click)="this.conchalert()">Pull String</button>
+ 

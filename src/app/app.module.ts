@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { QAconchComponent } from './qaconch/qaconch.component';
 
@@ -11,6 +11,7 @@ import { QAconchComponent } from './qaconch/qaconch.component';
   ],
   imports: [
     BrowserModule,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
